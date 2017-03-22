@@ -1,0 +1,24 @@
+{
+
+    "name": "QQGroup Spider",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "*********获取QQ群成员信息*********",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "webNavigation",
+        "tabs",
+        "contextMenus",
+        "http://lovchun.com/",
+        "notifications"
+    ],
+    "background": {
+        "scripts": ["jquery-2.1.1.min.js", "eventPage.js"]
+    },
+    "content_scripts": [{
+        "matches": ["http://qun.qzone.qq.com/group*"],
+        "js": ["jquery-2.1.1.min.js", "contentscript.js"]
+    }]
+}
